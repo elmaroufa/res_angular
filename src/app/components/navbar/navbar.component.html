@@ -5,7 +5,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="[ '/home' ]">Home <span class="sr-only">(current)</span></a>
       </li>
@@ -18,11 +18,19 @@
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="[ '/add' ]">Add user</a>
     </li>
-
   </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <!-- <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    </form> -->
+    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+          <select class="form-select" (change)="changeLang($event)" name="" id="">
+              <option [selected]="lang==='en'" value="en">English</option>
+              <option [selected]="lang==='fr'" value="fr">French</option>
+              <option [selected]="lang==='es'" value="es">Spanish</option>
+          </select>
+      </li>
+  </ul>
   </div>
 </nav>
